@@ -1,5 +1,3 @@
-
-
 import pyautogui                # automation library
 import time                     # time library
 import pyperclip                # copy paste allowing library
