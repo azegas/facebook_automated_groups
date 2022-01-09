@@ -11,19 +11,19 @@ In terminal:
 Create virtualenv:
 
 * python3 -m venv env            # create virtual environment
-*source env/bin/activate         # activate virtual env
+* source env/bin/activate         # activate virtual env
 
-Install libraries:
+Install needed libraries:
 * pip install pyautogui           # install the automation library
 * pip install openpyxl            # for opening xlsx filesx
 
 sadly you are unable to use your pc while the script is runnig, since it needs your keyboard and mouse.
 
 Would be nice to:
-DONE - paimti is excelio failo grupes - done
-OPEN - jei cant open page - (popup confirmation window) - open new tab and continue
-OPEN - take screenshot of the end result to confirm the post was published
-OPEN - if "Write something" doesnt exist - find "create a public post"
+- [x] DONE - paimti is excelio failo grupes - done
+- [ ] OPEN - jei cant open page - (popup confirmation window) - open new tab and continue
+- [ ] OPEN - take screenshot of the end result to confirm the post was published
+- [ ] OPEN - if "Write something" doesnt exist - find "create a public post"
 
 # Automated Posting to Facebook groups
 
