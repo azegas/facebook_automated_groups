@@ -1,28 +1,31 @@
 # Preparation
 
-In terminal:
+## In terminal:
 
-For mouse control
+For mouse control:
 * **sudo apt install python3-tk python3-dev**
 
-Find mouse location
+Find mouse location:
 * **sudo apt install xdotool**
 
-For pyperclip to work
+For pyperclip to work:
 * **sudo apt-get install xsel**
 
-For screenshots to work 
+For screenshots to work:
 * **sudo apt install scrot**
 
-For mouse coordinates. Type this whenever needed. Ctrl+c to exit.
+For mouse coordinates. Type this whenever needed. Ctrl+c to exit:
 * **watch -t -n 0.0001 xdotool getmouselocation**
 
-Create virtualenv:
+## Create virtualenv:
 
-* python3 -m venv env            # create virtual environment
-* source env/bin/activate         # activate virtual env
+Create virtual environment:
+* **python3 -m venv env**
 
-Install needed libraries:
+Activate virtual env:
+* **source env/bin/activate**
+
+## Install needed libraries:
 * pip install pyautogui           # install the automation library
 * pip install openpyxl            # for opening xlsx filesx
 
