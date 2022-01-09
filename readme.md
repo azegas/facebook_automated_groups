@@ -1,3 +1,27 @@
+# Preparation
+
+Before launching the script, do these steps in your termina:
+
+sudo apt install python3-tk python3-dev # for controlling mouse
+sudo apt install xdotool        # for finding mouse location
+sudo apt-get install xsel       # for pyperclip to work
+sudo apt install scrot          # for screenshots to work 
+watch -t -n 0.0001 xdotool getmouselocation # for mouse coordinates
+
+source env/bin/activate         # activate virtual env
+
+pip install pyautogui           # install the automation library
+pip install xlrd                # maybe NOT needed - doesnt open xlsx files
+pip install openpyxl            # for opening xlsx filesx
+
+# sadly you are unable to use your pc while the script is runnig, since it needs your keyboard and mouse.
+
+Would be nice to:
+DONE - paimti is excelio failo grupes - done
+OPEN - jei cant open page - (popup confirmation window) - open new tab and continue
+OPEN - take screenshot of the end result to confirm the post was published
+OPEN - if "Write something" doesnt exist - find "create a public post"
+
 # Automated Posting to Facebook groups
 
 Smuti Fruti freeze dried smoothies needed a solution for a free commercial.
