@@ -2,11 +2,20 @@
 
 In terminal:
 
-* **sudo apt install python3-tk python3-dev** # for controlling mouse
-* **sudo apt install xdotool**        # for finding mouse location
-* **sudo apt-get install xsel**       # for pyperclip to work
-* **sudo apt install scrot**          # for screenshots to work 
-* **watch -t -n 0.0001 xdotool getmouselocation** # for mouse coordinates
+For mouse control
+* **sudo apt install python3-tk python3-dev**
+
+Find mouse location
+* **sudo apt install xdotool**
+
+For pyperclip to work
+* **sudo apt-get install xsel**
+
+For screenshots to work 
+* **sudo apt install scrot**
+
+For mouse coordinates. Type this whenever needed. Ctrl+c to exit.
+* **watch -t -n 0.0001 xdotool getmouselocation**
 
 Create virtualenv:
 
