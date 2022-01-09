@@ -1,6 +1,6 @@
 # Preparation
 
-Before launching the script, do these steps in your terminal:
+In terminal:
 
 * sudo apt install python3-tk python3-dev # for controlling mouse
 * sudo apt install xdotool        # for finding mouse location
@@ -8,14 +8,16 @@ Before launching the script, do these steps in your terminal:
 * sudo apt install scrot          # for screenshots to work 
 * watch -t -n 0.0001 xdotool getmouselocation # for mouse coordinates
 
+Create virtualenv:
+
 * python3 -m venv env            # create virtual environment
 *source env/bin/activate         # activate virtual env
 
+Install libraries:
 * pip install pyautogui           # install the automation library
-* pip install xlrd                # maybe NOT needed - doesnt open xlsx files
 * pip install openpyxl            # for opening xlsx filesx
 
-# sadly you are unable to use your pc while the script is runnig, since it needs your keyboard and mouse.
+sadly you are unable to use your pc while the script is runnig, since it needs your keyboard and mouse.
 
 Would be nice to:
 DONE - paimti is excelio failo grupes - done
