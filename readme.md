@@ -53,6 +53,7 @@ Sadly you are unable to use your pc while the script is runnig, since it needs y
 
 # Would be nice to:
 - [x] 2022-01-08 paimti grupiu info is excelio failo
+- [x] 2022-01-13 if "Write something" doesnt exist - find "create a public post"
 - [ ] jei cant open page - (popup confirmation window) - open new tab and continue
 - [ ] take screenshot of the end result to confirm the post was published
-- [ ] if "Write something" doesnt exist - find "create a public post"
+
