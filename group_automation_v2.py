@@ -7,7 +7,7 @@ from openpyxl import Workbook, load_workbook # excel library
 pyautogui.PAUSE = 2.5 # Set up a pause after each PyAutoGUI call
 excel_file = load_workbook('facebook_groups.xlsx')
 excel_sheet = excel_file['pkn']
-post_link = "https://www.facebook.com/107538098417353/photos/a.107837208387442/128462562991573"
+post_link = "https://www.facebook.com/107538098417353/photos/a.107837208387442/129550766216086/"
 content = '🌿 "Sveika, skanu, sotu, o svarbiausia patogu ir greita" - Sigita"'
 cta1 = 'Išsirink savo glotnutį 👉'
 cta2 = 'https://smutifruti.lt/'
@@ -22,7 +22,7 @@ def main():
       group_url = row[1].value  # fetch group id from excel
       group_name = row[0].value # fetch group name from excel
       link = 'https://facebook.com/groups/'+str(group_url) # pro
-      time.sleep(2)                                        # time for new browser window to load
+      time.sleep(5)                                        # time for new browser window to load
       # type group name
       pyperclip.copy(link)
       pyautogui.hotkey('ctrl', 'v') # paste
