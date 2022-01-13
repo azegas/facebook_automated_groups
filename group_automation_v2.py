@@ -6,7 +6,7 @@ from openpyxl import Workbook, load_workbook # excel library
 # Global variables
 pyautogui.PAUSE = 2.5 # Set up a pause after each PyAutoGUI call
 excel_file = load_workbook('facebook_groups.xlsx')
-excel_sheet = excel_file['pkn']
+excel_sheet = excel_file['automatizavimo_grupes']
 post_link = "https://www.facebook.com/107538098417353/photos/a.107837208387442/129550766216086/"
 content = '🌿 "Sveika, skanu, sotu, o svarbiausia patogu ir greita" - Sigita"'
 cta1 = 'Išsirink savo glotnutį 👉'
