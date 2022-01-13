@@ -46,12 +46,24 @@ def open_tab():
     pyautogui.keyUp('ctrl')
 
 def open_writing_window():
-    # Open "Create Post window"
-    pyautogui.hotkey('ctrl','f')
-    pyautogui.typewrite('Write something')
-    pyautogui.press('enter')
-    pyautogui.press('escape')
-    pyautogui.press('enter')
+   try:
+      x, y = pyautogui.locateCenterOnScreen("/home/arvydas/Dropbox/projects/facebook_automated_groups/resources/create_public_post.png")
+      print("The image was found.")
+      pyautogui.click(x,y)
+    
+   except TypeError:
+      print("Could not locate the image - Create a public post...")
+      a, b = pyautogui.locateCenterOnScreen("/home/arvydas/Dropbox/projects/facebook_automated_groups/resources/write_something.png")
+      print("The image was found - write something")
+      pyautogui.click(a,b)
+   
+   # before 2022-01-13
+   # # Open "Create Post window"
+   # pyautogui.hotkey('ctrl','f')
+   # pyautogui.typewrite('Write something')
+   # pyautogui.press('enter')
+   # pyautogui.press('escape')
+   # pyautogui.press('enter')
 
 def write_content():
     pyperclip.copy(post_link)
