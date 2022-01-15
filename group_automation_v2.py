@@ -7,13 +7,21 @@ from openpyxl import Workbook, load_workbook # excel library
 # pyautogui.PAUSE = 2.5 # Set up a pause after each PyAutoGUI call
 excel_file = load_workbook('facebook_groups.xlsx')
 excel_sheet = excel_file['automatizavimo_grupes']
-post_link = "https://www.facebook.com/107538098417353/photos/a.107837208387442/129550766216086/"
+post_link = "https://fb.watch/aydyGVG3JQ/"
 content = '🌿 "Sveika, skanu, sotu, o svarbiausia patogu ir greita" - Sigita"'
 cta1 = 'Išsirink savo glotnutį 👉'
 cta2 = 'https://smutifruti.lt/'
 
 def main():
-   time.sleep(4)                # some time to prepare the browser
+   # some time to prepare the browser
+   print("3 Seconds to prepare the browser")
+   for i in range(4):
+      time.sleep(1)
+      print("Prepare browser" + " " + str(i) + "/3")
+   time.sleep(1)
+   print("Opening browser")
+   time.sleep(1)
+   print("\n")
    open_tab();
    count = 0
    scriptoPradzia = time.time()
@@ -22,17 +30,23 @@ def main():
       group_url = row[1].value  # fetch group id from excel
       group_name = row[0].value # fetch group name from excel
       link = 'https://facebook.com/groups/'+str(group_url) # pro
-      time.sleep(5)                                        # time for new browser window to load
       # type group name
+      time.sleep(3)
       pyperclip.copy(link)
       pyautogui.hotkey('ctrl', 'v') # paste
       pyautogui.typewrite('\n')
       print("Atsidariau" + " " + str(group_name))
-      time.sleep(6)            # let browser window to load
+      print("\n")
+      # let browser window load
+      print("5 seconds to let the browser window load")
+      for i in range(6):
+         time.sleep(1)
+         print("Browser window load" + " " + str(i) + "/5")
       open_writing_window();
       write_content();
       prepare_next();
       print("Done with" + " " + str(group_name)+"."+" " + "It took {0} seconds" .format(time.time() - postoPradzia))
+      print("--------------------------------------------------------------------------------------")
       print("\n")       # new line
       count +=1 # variable will increment every loop iteration
    print("Papostinau i" + " " + str(count) + " " + "grupes.") # how many groups I have posted to 
@@ -55,6 +69,7 @@ def open_writing_window():
       a, b = pyautogui.locateCenterOnScreen("/home/arvydas/Dropbox/projects/facebook_automated_groups/resources/write_something.png", region=(1069, 673, 400, 400))
       print("The image 'write something' was found")
       pyautogui.click(a,b)
+   time.sleep(2)
       
 def write_content():
    pyperclip.copy(post_link)
