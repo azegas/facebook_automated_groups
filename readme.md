@@ -12,7 +12,7 @@ Second successful full revolution - 2022-01-13
 Time per one group : ~1min (shoud be improved)
 Groups posted to : 31
 
-![Alt text](https://github.com/arvydasg/python/blob/main/facebook_automated_groups/resources/1st.png)
+![Alt text](https://github.com/arvydasg/facebook_automated_groups/blob/master/resources/1st.png)
 
 # Preparation
 
