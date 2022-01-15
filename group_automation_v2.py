@@ -5,6 +5,12 @@ from openpyxl import Workbook, load_workbook # excel library
 
 # Global variables
 # pyautogui.PAUSE = 2.5 # Set up a pause after each PyAutoGUI call
+
+BGBLACK = '\u001b[40m'
+BGGREEN = '\u001b[42m'
+BGRED = '\u001b[41m'
+CEND = '\033[0m'
+
 excel_file = load_workbook('facebook_groups.xlsx')
 excel_sheet = excel_file['automatizavimo_grupes']
 post_link = "https://fb.watch/aydyGVG3JQ/"
@@ -35,7 +41,7 @@ def main():
       pyperclip.copy(link)
       pyautogui.hotkey('ctrl', 'v') # paste
       pyautogui.typewrite('\n')
-      print("Atsidariau" + " " + str(group_name))
+      print("Atsidariau" + " " + BGBLACK + str(group_name) + CEND)
       print("\n")
       # let browser window load
       print("5 seconds to let the browser window load")
@@ -45,12 +51,12 @@ def main():
       open_writing_window();
       write_content();
       prepare_next();
-      print("Done with" + " " + str(group_name)+"."+" " + "It took {0} seconds" .format(time.time() - postoPradzia))
+      print(BGGREEN + "PAPOSTINTA"+ CEND+ " i " + " " + BGBLACK + str(group_name)+"."+" " + BGRED + "Uztruko {0} sekundes" .format(time.time() - postoPradzia) + CEND)
       print("--------------------------------------------------------------------------------------")
       print("\n")       # new line
       count +=1 # variable will increment every loop iteration
    print("Papostinau i" + " " + str(count) + " " + "grupes.") # how many groups I have posted to 
-   print("It took {0} seconds" .format(time.time() - scriptoPradzia)) # how long it took for the script to run
+   print("Is viso uztruko {0} sekundes" .format(time.time() - scriptoPradzia)) # how long it took for the script to run
       
 def open_tab():
     # opens new tab in chrome
