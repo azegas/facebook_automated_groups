@@ -20,32 +20,32 @@ For mouse control:
 `sudo apt install python3-tk python3-dev`
 
 Find mouse location:
-* **sudo apt install xdotool**
+`sudo apt install xdotool`
 
 For pyperclip to work:
-* **sudo apt-get install xsel**
+`sudo apt-get install xsel`
 
 For screenshots to work:
-* **sudo apt install scrot**
+`sudo apt install scrot
 
 For mouse coordinates. Type this whenever needed. Ctrl+c to exit:
-* **watch -t -n 0.0001 xdotool getmouselocation**
+`watch -t -n 0.0001 xdotool getmouselocation`
 
 ## Create virtualenv:
 
 Create virtual environment:
-* **python3 -m venv env**
+`python3 -m venv env`
 
 Activate virtual env:
-* **source env/bin/activate**
+`source env/bin/activate`
 
 ## Install needed libraries:
 
 Install the automation library:
-* **pip install pyautogui**
+`pip install pyautogui`
 
 For opening xlsx filesx:
-* **pip install openpyxl**
+`pip install openpyxl`
 
 Sadly you are unable to use your pc while the script is runnig, since it needs your keyboard and mouse.
 
