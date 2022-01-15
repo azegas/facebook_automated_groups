@@ -81,9 +81,9 @@ def write_content():
    pyperclip.copy(cta2)
    pyautogui.hotkey('ctrl', 'v') # paste
     
-    # half(left) screen Acer Aspire V3 771G
-    pyautogui.click(1666, 525) # turn off url link according to your screen pixel location (xdotool on linux)
-    pyautogui.click(1448, 950) # Click POST according to your screen pixel location (xdotool on linux)
+   # half(left) screen Acer Aspire V3 771G
+   pyautogui.click(1666, 525) # turn off url link according to your screen pixel location (xdotool on linux)
+   pyautogui.click(1448, 950) # Click POST according to your screen pixel location (xdotool on linux)
     
     # # whole screen Lenovo x61s
     # pyautogui.click(751, 478) # turn off url link according to your screen pixel location (xdotool on linux)
