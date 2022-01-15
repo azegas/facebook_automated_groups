@@ -4,7 +4,7 @@ import pyperclip                # copy paste allowing library
 from openpyxl import Workbook, load_workbook # excel library
 
 # Global variables
-pyautogui.PAUSE = 2.5 # Set up a pause after each PyAutoGUI call
+# pyautogui.PAUSE = 2.5 # Set up a pause after each PyAutoGUI call
 excel_file = load_workbook('facebook_groups.xlsx')
 excel_sheet = excel_file['automatizavimo_grupes']
 post_link = "https://www.facebook.com/107538098417353/photos/a.107837208387442/129550766216086/"
@@ -58,8 +58,8 @@ def open_writing_window():
       
 def write_content():
    pyperclip.copy(post_link)
+   time.sleep(1)
    pyautogui.hotkey('ctrl', 'v') # paste
-   time.sleep(5)
    pyautogui.hotkey('ctrl','a') # select all
    pyautogui.press('backspace') # link not necessary anymore, delete
    pyperclip.copy(content)
@@ -70,9 +70,11 @@ def write_content():
    pyautogui.press('enter')      # newline
    pyperclip.copy(cta2)
    pyautogui.hotkey('ctrl', 'v') # paste
+   time.sleep(1)
     
    # half(left) screen Acer Aspire V3 771G
    pyautogui.click(1666, 525) # turn off url link according to your screen pixel location (xdotool on linux)
+   time.sleep(1)
    pyautogui.click(1448, 950) # Click POST according to your screen pixel location (xdotool on linux)
     
     # # whole screen Lenovo x61s
