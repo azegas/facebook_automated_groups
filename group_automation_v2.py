@@ -65,20 +65,21 @@ def open_writing_window():
    # pyautogui.press('escape')
    # pyautogui.press('enter')
 
+      
 def write_content():
-    pyperclip.copy(post_link)
-    pyautogui.hotkey('ctrl', 'v') # paste
-    time.sleep(5)
-    pyautogui.hotkey('ctrl','a') # select all
-    pyautogui.press('backspace') # link not necessary anymore, delete
-    pyperclip.copy(content)
-    pyautogui.hotkey('ctrl', 'v') # paste
-    pyautogui.press('enter')      # newline
-    pyperclip.copy(cta1)
-    pyautogui.hotkey('ctrl', 'v') # paste
-    pyautogui.press('enter')      # newline
-    pyperclip.copy(cta2)
-    pyautogui.hotkey('ctrl', 'v') # paste
+   pyperclip.copy(post_link)
+   pyautogui.hotkey('ctrl', 'v') # paste
+   time.sleep(5)
+   pyautogui.hotkey('ctrl','a') # select all
+   pyautogui.press('backspace') # link not necessary anymore, delete
+   pyperclip.copy(content)
+   pyautogui.hotkey('ctrl', 'v') # paste
+   pyautogui.press('enter')      # newline
+   pyperclip.copy(cta1)
+   pyautogui.hotkey('ctrl', 'v') # paste
+   pyautogui.press('enter')      # newline
+   pyperclip.copy(cta2)
+   pyautogui.hotkey('ctrl', 'v') # paste
     
     # half(left) screen Acer Aspire V3 771G
     pyautogui.click(1666, 525) # turn off url link according to your screen pixel location (xdotool on linux)
