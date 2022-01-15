@@ -17,7 +17,7 @@ I created a script that posts their posts into the choosen facebook groups that 
 ## In terminal:
 
 For mouse control:
-* **sudo apt install python3-tk python3-dev**
+`sudo apt install python3-tk python3-dev`
 
 Find mouse location:
 * **sudo apt install xdotool**
