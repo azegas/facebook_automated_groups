@@ -56,15 +56,6 @@ def open_writing_window():
       a, b = pyautogui.locateCenterOnScreen("/home/arvydas/Dropbox/projects/facebook_automated_groups/resources/write_something.png")
       print("The image was found - write something")
       pyautogui.click(a,b)
-   
-   # before 2022-01-13
-   # # Open "Create Post window"
-   # pyautogui.hotkey('ctrl','f')
-   # pyautogui.typewrite('Write something')
-   # pyautogui.press('enter')
-   # pyautogui.press('escape')
-   # pyautogui.press('enter')
-
       
 def write_content():
    pyperclip.copy(post_link)
