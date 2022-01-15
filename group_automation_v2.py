@@ -47,12 +47,12 @@ def open_tab():
 
 def open_writing_window():
    try:
-      x, y = pyautogui.locateCenterOnScreen("/home/arvydas/Dropbox/projects/facebook_automated_groups/resources/create_public_post.png")
+      x, y = pyautogui.locateCenterOnScreen("/home/arvydas/Dropbox/projects/facebook_automated_groups/resources/create_public_post.png", region=(1069, 673, 400, 400))
       print("The image 'create_public_post.png' was found.")
       pyautogui.click(x,y)
    except TypeError:
       print("Could not locate the image - Create a public post...")
-      a, b = pyautogui.locateCenterOnScreen("/home/arvydas/Dropbox/projects/facebook_automated_groups/resources/write_something.png")
+      a, b = pyautogui.locateCenterOnScreen("/home/arvydas/Dropbox/projects/facebook_automated_groups/resources/write_something.png", region=(1069, 673, 400, 400))
       print("The image 'write something' was found")
       pyautogui.click(a,b)
       
