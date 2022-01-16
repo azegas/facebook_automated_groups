@@ -5,11 +5,11 @@ Smuti Fruti freeze dried smoothies needed a solution for a free commercial.
 I created a script that posts their posts into the choosen facebook groups that are stored into the excel file. If more groups are added, the script can automatically detect that and add them to the next operation.
 
 
-  | Revolution    | Groups           | Average duration  |
-  | ------------- |:-------------:| -----:|
-  | 2022-01-09      | 31 | ~60sec |
+  | Revolution    | Groups           | Average duration  | comment |	   
+  | ------------- |:-------------:| -----:|-------:|	 
+  | 2022-01-09      | 31 | ~60sec | comme
   | 2022-01-13      | 31      |   ~60sec |
-| 2022-01-16      |   68    |   ~23sec | got blocked after this. too many openings of groups
+| 2022-01-16      |   68    |   ~23sec | got blocked after this 68.|
 
 ![Alt text](https://github.com/arvydasg/facebook_automated_groups/blob/master/resources/1st.png)
 
