@@ -12,11 +12,11 @@ BGRED = '\u001b[41m'
 CEND = '\033[0m'
 
 excel_file = load_workbook('facebook_groups.xlsx')
-excel_sheet = excel_file['automatizavimo_grupes']
-post_link = "https://fb.watch/aydyGVG3JQ/"
-content = '🌿 "Sveika, skanu, sotu, o svarbiausia patogu ir greita" - Sigita"'
-cta1 = 'Išsirink savo glotnutį 👉'
-cta2 = 'https://smutifruti.lt/'
+excel_sheet = excel_file['test5']
+post_link = "https://www.facebook.com/107538098417353/photos/a.107837208387442/130632969441199"
+content = 'Pasiteisinimų praleisti pusryčius nebėra!🤤'
+cta1 = 'Vos viena minutė ir Jūsų stiklinėje - natūralus ir maistingas šviežių vaisių ir uogų glotnutis!'
+cta2 = 'Išsirink savo glotnutį 👉 https://smutifruti.lt/'
 
 def main():
    # some time to prepare the browser
@@ -25,6 +25,14 @@ def main():
       time.sleep(1)
       print("Prepare browser" + " " + str(i) + "/3")
    time.sleep(1)
+
+   # attempt of adding a  confirmation window before start of the script
+   # question = pyautogui.confirm(text='Ar narsykles langas ready? Po desine puse, uzima puse ekrano?', title='', buttons=['OK', 'Cancel'])
+   # if question == str('OK'):
+   #    print("labas")
+   # else:
+   #    exit()
+   
    print("Opening browser")
    time.sleep(1)
    print("\n")
@@ -44,10 +52,10 @@ def main():
       print("Atsidariau" + " " + BGBLACK + str(group_name) + CEND)
       print("\n")
       # let browser window load
-      print("5 seconds to let the browser window load")
-      for i in range(6):
+      print("9 seconds to let the browser window load")
+      for i in range(10):
          time.sleep(1)
-         print("Browser window load" + " " + str(i) + "/5")
+         print("Browser window load" + " " + str(i) + "/9")
       open_writing_window();
       write_content();
       prepare_next();
@@ -67,12 +75,12 @@ def open_tab():
 
 def open_writing_window():
    try:
-      x, y = pyautogui.locateCenterOnScreen("/home/arvydas/Dropbox/projects/facebook_automated_groups/resources/create_public_post.png", region=(1069, 673, 400, 400))
+      x, y = pyautogui.locateCenterOnScreen("/home/arvydas/Dropbox/projects/facebook_automated_groups/resources/cpp.png", region=(1013, 636, 400, 400))
       print("The image 'create_public_post.png' was found.")
       pyautogui.click(x,y)
    except TypeError:
       print("Could not locate the image - Create a public post...")
-      a, b = pyautogui.locateCenterOnScreen("/home/arvydas/Dropbox/projects/facebook_automated_groups/resources/write_something.png", region=(1069, 673, 400, 400))
+      a, b = pyautogui.locateCenterOnScreen("/home/arvydas/Dropbox/projects/facebook_automated_groups/resources/ws.png", region=(1013, 636, 400, 400))
       print("The image 'write something' was found")
       pyautogui.click(a,b)
    time.sleep(2)
@@ -103,7 +111,13 @@ def write_content():
     # pyautogui.click(533, 666) # Click POST according to your screen pixel location (xdotool on linux)
 
 def prepare_next():
-    pyautogui.write(['f6'])     # mark search field, prepare for new link input
+   # some time to prepare the browser
+   print("2 Seconds to prepare the browser")
+   for i in range(2):
+      time.sleep(1)
+      print("Posting" + " " + str(i) + "/2")
+      time.sleep(1)
+   pyautogui.write(['f6'])     # mark search field, prepare for new link input
       
 if __name__ == '__main__':
 	main()
