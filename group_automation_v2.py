@@ -11,12 +11,16 @@ BGGREEN = '\u001b[42m'
 BGRED = '\u001b[41m'
 CEND = '\033[0m'
 
+# posto nuoroda in an an external file
+with open('content/nuoroda.txt', 'r') as file:
+    nuoroda = file.read().rstrip('\n')
+
+# posto nuoroda in an an external file
+with open('content/tekstas.txt', 'r') as file:
+    tekstas = file.read().rstrip('\n')
+
 excel_file = load_workbook('facebook_groups.xlsx')
 excel_sheet = excel_file['test5']
-post_link = "https://www.facebook.com/107538098417353/photos/a.107837208387442/130632969441199"
-content = 'Pasiteisinimų praleisti pusryčius nebėra!🤤'
-cta1 = 'Vos viena minutė ir Jūsų stiklinėje - natūralus ir maistingas šviežių vaisių ir uogų glotnutis!'
-cta2 = 'Išsirink savo glotnutį 👉 https://smutifruti.lt/'
 
 def main():
    # some time to prepare the browser
@@ -26,13 +30,6 @@ def main():
       print("Prepare browser" + " " + str(i) + "/3")
    time.sleep(1)
 
-   # attempt of adding a  confirmation window before start of the script
-   # question = pyautogui.confirm(text='Ar narsykles langas ready? Po desine puse, uzima puse ekrano?', title='', buttons=['OK', 'Cancel'])
-   # if question == str('OK'):
-   #    print("labas")
-   # else:
-   #    exit()
-   
    print("Opening browser")
    time.sleep(1)
    print("\n")
@@ -86,23 +83,18 @@ def open_writing_window():
    time.sleep(2)
       
 def write_content():
-   pyperclip.copy(post_link)
+   pyperclip.copy(nuoroda)
    time.sleep(1)
    pyautogui.hotkey('ctrl', 'v') # paste
    pyautogui.hotkey('ctrl','a') # select all
    pyautogui.press('backspace') # link not necessary anymore, delete
-   pyperclip.copy(content)
+   pyperclip.copy(tekstas)
    pyautogui.hotkey('ctrl', 'v') # paste
    pyautogui.press('enter')      # newline
-   pyperclip.copy(cta1)
-   pyautogui.hotkey('ctrl', 'v') # paste
-   pyautogui.press('enter')      # newline
-   pyperclip.copy(cta2)
-   pyautogui.hotkey('ctrl', 'v') # paste
+
    time.sleep(1)
-    
    # half(left) screen Acer Aspire V3 771G
-   pyautogui.click(1666, 525) # turn off url link according to your screen pixel location (xdotool on linux)
+   pyautogui.click(1664, 517) # turn off url link according to your screen pixel location (xdotool on linux)
    time.sleep(1)
    pyautogui.click(1448, 950) # Click POST according to your screen pixel location (xdotool on linux)
     
