@@ -11,7 +11,7 @@ I created a script that posts their posts into the choosen facebook groups that 
   | 2022-01-13      | 31      |   ~60sec |
 | 2022-01-16      |   68    |   ~23sec | got blocked after this 68.|
 |2022-01-17 |	  73+21(later) |~24 sec | facebook message - too many actions|
-|2022-01-18 |	  66+53 |~24 sec | smooth two runs |
+|2022-01-18 |	  66+53 |~24 sec | smooth two runs. GOT BANNED. |
 
 
 ![Alt text](https://github.com/arvydasg/facebook_automated_groups/blob/master/resources/1st.png)
