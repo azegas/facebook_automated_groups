@@ -59,3 +59,63 @@ Sadly you are unable to use your pc while the script is runnig, since it needs y
 - [ ] jei cant open page - (popup confirmation window) - open new tab and continue
 - [ ] take screenshot of the end result to confirm the post was published
 
+
+
+
+
+# README UPDATE:
+
+![image](https://github.com/azegas/facebook_automated_groups/assets/78803192/9c20f76b-bf24-4826-a8a1-e25271f55763)
+
+
+* Intro
+
+A Django web app that posts your desired content to the chosen Facebook groups
+for you!
+
+* What is it for
+
+A recently started smoothie drink powder business that is testing itself out in
+the field. Instead of purchasing ads on facebook, the client first wanted to
+post their content to various facebook groups to see the engagement. Over time
+this tasks proved to be too tedious, since it requires a lot of manual
+clicking.
+
+I have decided to help them out by creating this automation bot that posts to
+various facebook groups by itself, with client needing to click only a few
+clicks. There were various facebook bots on the internet, but you had to pay
+fro those. It was interesting for me to see if I can create something like it
+myself.
+
+* How it works
+
+All the user need is a link to the facebook post and a call to action message.
+He then needs to input these two into the browser window and click start.
+Application does the rest. Taking the data from the groups file, going through
+each and every one of them and posting the choosen content (link, ad
+description and a call to action message). Leave it running, come back after a
+white - inspect the terminal windows - see how many successful group posts this
+app has done.
+
+* Cons
+
+There are a few cons of using this script.
+
+- You can not really use the computer while it runs since it occupiesyour mouse
+  and you shouldn’t be clicking on other windows while it is running. You can
+  run this script while you are having a break, step away from your computer
+  for 15min or so and come back with having your post shared to 30 or so
+  groups.
+
+- Your facebook account gets restricted. Often. If you are posting to too many
+  groups at a time. 20 or so is fine, but more than that (in one sitting) and
+  you are risking to get a temporary ban by facebook.
+
+* What to fix
+
+- if the script breaks - take a screenshot of the whole screen (easier to debug
+  what happened)
+- when the script finishes posting to one group - take a screenshot (easier to
+  track the activity)
+- If group has pending posts - stop the for loop, run next group
+- Rebuild facebook_django app with modules
